@@ -16,7 +16,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<section class="work-area pad-90">
+<section class="work-area pad-90" id="portfolio">
     <div class="container">
         <div class="row">
             <div class="section-heading text-center mb-70">

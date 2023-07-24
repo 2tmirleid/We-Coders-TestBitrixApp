@@ -14,7 +14,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<!-- Интеграция верстки списка услуг -->
 <?php if (!empty($arResult["ITEMS"])): ?>
     <section id="pricing" class="pricing-area bg-color pt-60 pb-60">
         <div class="container">
@@ -50,7 +50,7 @@ $this->setFrameMode(true);
                             <?php endif; ?>
 
                             <div class="get-started">
-                                <a href="<?= $item['DETAIL_PAGE_URL'] ?>" class="btn <?= $item['PROPERTIES']['color']['VALUE_XML_ID'] ?? '' ?>">
+                                <a href="/contacts" class="btn <?= $item['PROPERTIES']['color']['VALUE_XML_ID'] ?? '' ?>">
                                     Узнать больше
                                 </a>
                             </div>

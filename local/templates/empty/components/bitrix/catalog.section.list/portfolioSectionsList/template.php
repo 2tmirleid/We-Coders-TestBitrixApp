@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<!-- Отображение разделов портфолио -->
 <?php if (!empty($arResult['SECTIONS'])): ?>
     <div class="col-lg-12">
         <div class="portfolio-menu brand-filter text-center mb-70">

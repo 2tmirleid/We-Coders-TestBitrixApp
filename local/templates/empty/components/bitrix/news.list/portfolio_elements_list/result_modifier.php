@@ -1,5 +1,7 @@
 <?php
 
+//Реализация сортировки работ по категориям
+//Перебор и запись всех айди работ
 if (!empty($arResult['ITEMS'])) {
     $arElementsIds = [];
     foreach ($arResult['ITEMS'] as  $arItem) {
@@ -16,7 +18,7 @@ if (!empty($arResult['ITEMS'])) {
 
 
     foreach ($arResult['ITEMS'] as $itemKey => $arItem) {
-        // Получение Названия основного раздела
+        // Получение названия основного раздела
         if (isset($arItem['IBLOCK_SECTION_ID'])) {
             $searchSectId = $arItem['IBLOCK_SECTION_ID'];
 

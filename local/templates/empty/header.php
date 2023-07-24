@@ -148,7 +148,7 @@ use Bitrix\Main\Page\Asset;
                                     "COMPONENT_TEMPLATE"    => "top_menu",
                                 ], false); ?>
 
-
+                            </div>
                                 <!-- Меню (для мобилки) -->
                                 <? $APPLICATION->IncludeComponent("bitrix:menu", "topMenuMobile", [
                                     "ALLOW_MULTI_SELECT"    => "N",

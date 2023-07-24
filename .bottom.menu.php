@@ -9,28 +9,21 @@ $aMenuLinks = Array(
     ),
     Array(
         "О нас",
-        "/sections/about",
+        "about",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Услуги",
-        "/sections/services",
+        "/services",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Портфолио",
-        "/sections/portfolio",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Блог",
-        "/sections/blog",
+        "/portfolio",
         Array(),
         Array(),
         ""

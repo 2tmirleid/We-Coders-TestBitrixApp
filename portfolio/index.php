@@ -4,6 +4,7 @@ $APPLICATION->SetTitle("Портфолио");
 $APPLICATION->SetPageProperty('TITLE', 'Портфолио');
 ?>
 
+<!-- Портфолио -->
 <? $APPLICATION->IncludeComponent("bitrix:news", "portfolio", [
     "ADD_ELEMENT_CHAIN"               => "Y",    // Включать название элемента в цепочку навигации
     "ADD_SECTIONS_CHAIN"              => "N",    // Включать раздел в цепочку навигации

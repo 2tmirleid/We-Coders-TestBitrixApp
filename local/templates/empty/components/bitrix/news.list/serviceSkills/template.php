@@ -13,6 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
+<!-- Интеграция верстки скиллов -->
 <?php if (!empty($arResult['ITEMS'])): ?>
     <div class="col-lg-6 col-md-6">
         <div class="our-skill">

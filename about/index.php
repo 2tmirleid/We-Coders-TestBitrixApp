@@ -48,6 +48,7 @@ $APPLICATION->SetPageProperty('TITLE', 'О нас');
         </div>
     </section>
 
+<!-- Отзывы -->
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "reviews", Array(
     "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
     "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
@@ -76,7 +77,7 @@ $APPLICATION->SetPageProperty('TITLE', 'О нас');
     ),
     "FILTER_NAME" => "",	// Фильтр
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-    "IBLOCK_ID" => "5",	// Код информационного блока
+    "IBLOCK_ID" => getIblockIdByCode('reviews'),	// Код информационного блока
     "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
     "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела

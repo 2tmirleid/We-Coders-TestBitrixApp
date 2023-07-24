@@ -31,7 +31,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
         "FIELD_CODE" => array("NAME","PREVIEW_PICTURE","DETAIL_TEXT","DETAIL_PICTURE",""),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-        "IBLOCK_ID" => "1",
+        "IBLOCK_ID" => getIblockIdByCode('main_page_top_slider'),
         "IBLOCK_TYPE" => "content",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "N",
@@ -132,7 +132,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
         "FIELD_CODE" => array("NAME","PREVIEW_PICTURE","DETAIL_TEXT"),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-        "IBLOCK_ID" => "2",
+        "IBLOCK_ID" => getIblockIdByCode('main_activities'),
         "IBLOCK_TYPE" => "content",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "N",
@@ -191,7 +191,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
         "FIELD_CODE" => array("NAME","PREVIEW_PICTURE","DETAIL_TEXT"),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-        "IBLOCK_ID" => "3",
+        "IBLOCK_ID" => getIblockIdByCode('infographics'),
         "IBLOCK_TYPE" => "content",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "N",
@@ -223,6 +223,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
     )
 );?>
 
+<!-- Портфолио -->
 <?$APPLICATION->IncludeComponent("bitrix:news", "portfolio", Array(
     "ADD_ELEMENT_CHAIN" => "N",	// Включать название элемента в цепочку навигации
     "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
@@ -264,7 +265,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
     "DISPLAY_PREVIEW_TEXT" => "N",	// Выводить текст анонса
     "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-    "IBLOCK_ID" => "4",	// Инфоблок
+    "IBLOCK_ID" => getIblockIdByCode('portfolio'),	// Инфоблок
     "IBLOCK_TYPE" => "content",	// Тип инфоблока
     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
     "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
@@ -318,6 +319,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
     false
 );?>
 
+<!-- Отзывы клиентов -->
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "reviews", Array(
     "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
     "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
@@ -346,7 +348,7 @@ $APPLICATION->SetPageProperty('TITLE', 'Главная');
     ),
     "FILTER_NAME" => "",	// Фильтр
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-    "IBLOCK_ID" => "5",	// Код информационного блока
+    "IBLOCK_ID" => getIblockIdByCode('reviews'),	// Код информационного блока
     "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
     "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела

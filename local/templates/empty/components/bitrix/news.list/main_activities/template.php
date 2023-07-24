@@ -15,6 +15,7 @@ $this->setFrameMode(true);
 
 <!-- Основные направления -->
 <?php if(!empty($arResult['ITEMS'])): ?>
+<!-- Интеграция верстки основных направлений -->
     <section class="service-area pt-90 pb-60 bg-color">
         <div class="container">
             <div class="row">

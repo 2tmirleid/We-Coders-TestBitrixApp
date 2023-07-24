@@ -12,8 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
+<!-- Интеграция верстки отзывов -->
 <?php if (!empty($arResult['ITEMS'])): ?>
-    <section class="testimonial-area bg-color pad-90">
+    <section class="testimonial-area bg-color pad-90" id="reviews">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">

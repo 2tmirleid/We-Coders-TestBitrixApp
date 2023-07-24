@@ -14,6 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 <!-- Инфографика -->
+<!-- Интеграция верстки инфографики -->
 <?php if(!empty($arResult['ITEMS'])): ?>
     <section class="project-count-area brand-bg pad-90">
         <div class="container">
