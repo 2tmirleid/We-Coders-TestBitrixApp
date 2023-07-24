@@ -10,7 +10,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
  * @global CMain $APPLICATION
  * @global CUser $USER
  */
-
+//Отправка письма на почту через форму обратной связи
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 
 $arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
@@ -35,6 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
                 $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_NAME");
             if((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_email"]) <= 1)
                 $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_EMAIL");
+            //Добавил телефон в список полей
             if((empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"])) && empty($_POST["user_phone"]))
                 $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_PHONE");
             if((empty($arParams["REQUIRED_FIELDS"]) || in_array("MESSAGE", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["MESSAGE"]) <= 3)
@@ -83,6 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
         $arResult["MESSAGE"] = htmlspecialcharsbx($_POST["MESSAGE"]);
         $arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
         $arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
+        //Добавил телефон в список полей
         $arResult["AUTHOR_PHONE"] = htmlspecialcharsbx($_POST["user_phone"]);
     }
     else
